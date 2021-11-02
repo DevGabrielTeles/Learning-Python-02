@@ -19,14 +19,20 @@ def validacao():
             print(calculo)
         elif total_dias == 0:
             print("Você inseriu um valor inválido, insira um valor positivo diferente de 0.")
-        elif total_dias < 0:
+        else:
             print("Você inseriu um valor inválido, insira um valor positivo diferente de 0.")
 
 
     except ValueError:
         print("Não tente burlar a entrada.")
 
-
+# Restarting the application to keep running
+# Looping could be done in Python with while or for
 # Input
-user_input = input("Digite o número de dias e te darei o total de segundos:")
-validacao()
+print("Quando quiser sair da aplicação digite: sair ")
+user_input = 0
+while user_input != "sair":
+    user_input = input("Digite o número de dias e te darei o total de segundos:")
+    validacao()
+
+
